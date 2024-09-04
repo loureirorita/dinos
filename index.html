@@ -4,31 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dinosaur Learning Hub</title>
+    <title>Dino Discovery</title>
     <style>
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4; /* Light earthy grey */
+            font-family: 'Comic Sans MS', 'Comic Sans', cursive; /* Playful font */
+            background-color: #f9f7f7; /* Light, airy background */
             color: #333; /* Darker text for readability */
         }
 
         header {
-            background-color: #6b705c; /* Earthy green */
+            background-color: #377d71; /* Vibrant teal */
             padding: 20px;
             text-align: center;
             color: #fff; /* White text for contrast */
+            position: relative;
         }
 
         h1 {
             margin: 0;
-            font-size: 2.5rem;
+            font-size: 2.8rem;
+            text-shadow: 2px 2px #264653; /* Subtle shadow for fun effect */
         }
 
         nav {
             display: flex;
             justify-content: center;
-            background-color: #a5a58d; /* Softer green */
+            background-color: #e76f51; /* Bright, inviting orange */
             padding: 10px 0;
         }
 
@@ -36,69 +38,102 @@
             color: #fff; /* White text */
             text-decoration: none;
             margin: 0 15px;
-            padding: 10px 20px;
-            background-color: #cb997e; /* Earthy brown */
-            border-radius: 5px;
-            transition: background-color 0.3s;
+            padding: 12px 24px;
+            background-color: #f4a261; /* Softer orange */
+            border-radius: 15px;
+            transition: background-color 0.3s, transform 0.3s;
+            font-weight: bold;
         }
 
         nav a:hover {
-            background-color: #ddbea9; /* Lighter brown */
+            background-color: #e9c46a; /* Brighter yellow for hover */
+            transform: scale(1.1);
         }
 
         .container {
-            padding: 20px;
+            padding: 40px 20px;
             text-align: center;
+        }
+
+        .container h2 {
+            font-size: 2.2rem;
+            color: #264653; /* Darker teal */
         }
 
         .button {
             display: inline-block;
-            margin: 10px;
-            padding: 15px 30px;
-            font-size: 1.1rem;
+            margin: 15px;
+            padding: 20px 40px;
+            font-size: 1.3rem;
             color: #fff; /* White text */
-            background-color: #b7b7a4; /* Muted green */
+            background-color: #2a9d8f; /* Vibrant green */
             border: none;
-            border-radius: 8px;
+            border-radius: 15px;
             cursor: pointer;
             transition: background-color 0.3s, transform 0.3s;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
         }
 
         .button:hover {
-            background-color: #a5a58d; /* Softer green */
+            background-color: #264653; /* Darker teal on hover */
             transform: scale(1.05);
         }
 
         .button.red {
-            background-color: #bc4749; /* Pop of red */
+            background-color: #e63946; /* Brighter, playful red */
+        }
+
+        .button.red:hover {
+            background-color: #d62828; /* Deeper red on hover */
         }
 
         footer {
-            background-color: #6b705c; /* Earthy green */
+            background-color: #264653; /* Darker teal */
             color: #fff; /* White text */
             text-align: center;
-            padding: 15px 0;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        /* Adding some fun dinosaur elements */
+        header:before {
+            content: "🦕";
+            font-size: 4rem;
+            position: absolute;
+            top: 5px;
+            left: 20px;
+        }
+
+        header:after {
+            content: "🦖";
+            font-size: 4rem;
+            position: absolute;
+            top: 5px;
+            right: 20px;
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Welcome to the Dinosaur Learning Hub</h1>
+    <h1>Dino Discovery</h1>
 </header>
 
 <nav>
     <a href="#">Home</a>
+    <a href="#">About</a>
     <a href="#">Dinosaurs</a>
     <a href="#">Resources</a>
     <a href="#">Contact</a>
 </nav>
 
 <div class="container">
-    <h2>Explore the World of Dinosaurs</h2>
+    <h2>Explore the World of Dinosaurs!</h2>
     <button class="button">Learn More</button>
     <button class="button red">Start Quiz</button>
     <button class="button">Fun Facts</button>
@@ -106,8 +141,9 @@
 </div>
 
 <footer>
-    <p>© 2024 Dinosaur Learning Hub. All Rights Reserved.</p>
+    <p>© 2024 Dino Discovery. All Rights Reserved.</p>
 </footer>
 
 </body>
 </html>
+
