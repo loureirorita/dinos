@@ -1,1 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinosaur Gallery</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+            background-color: #f9f7f7;
+            color: #333;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #377d71;
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            text-shadow: 2px 2px #264653;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .gallery-item {
+            background-color: #e9c46a;
+            border-radius: 15px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 300px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .gallery-item h2 {
+            font-size: 1.4rem;
+            margin: 10px;
+            color: #264653;
+        }
+
+        .gallery-item p {
+            margin: 0 10px 10px;
+            font-size: 1rem;
+            color: #333;
+        }
+
+        .home-button {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            background-color: #e76f51;
+            color: #fff;
+            border: none;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .home-button:hover {
+            background-color: #264653;
+        }
+
+        footer {
+            background-color: #264653;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Dinosaur Gallery</h1>
+</header>
+
+<!-- Home Button -->
+<button class="home-button" onclick="window.location.href='index.html'">Back to Home</button>
+
+<div class="gallery">
+    <div class="gallery-item">
+        <img src="images/tyrannosaurus-rex-gallery.jpg" alt="Tyrannosaurus Rex">
+        <h2>Tyrannosaurus Rex</h2>
+        <p>The Tyrannosaurus Rex was one of the largest meat-eating dinosaurs.</p>
+    </div>
+    <div class="gallery-item">
+        <img src="images/triceratops-gallery.jpg" alt="Triceratops">
+        <h2>Triceratops</h2>
+        <p>Triceratops had three distinct facial horns and a large frill protecting its neck.</p>
+    </div>
+    <div class="gallery-item">
+        <img src="images/velociraptor-gallery.jpg" alt="Velociraptor">
+        <h2>Velociraptor</h2>
+        <p>Velociraptors were small but fierce, with sharp claws and teeth.</p>
+    </div>
+    <div class="gallery-item">
+        <img src="images/brachiosaurus-gallery.jpg" alt="Brachiosaurus">
+        <h2>Brachiosaurus</h2>
+        <p>Brachiosaurus was known for its long neck and large size.</p>
+    </div>
+    <div class="gallery-item">
+        <img src="images/stegosaurus-gallery.jpg" alt="Stegosaurus">
+        <h2>Stegosaurus</h2>
+        <p>Stegosaurus had distinctive plates along its back and a spiked tail.</p>
+    </div>
+    <div class="gallery-item">
+        <img src="images/spinosaurus-gallery.jpg" alt="Spinosaurus">
+        <h2>Spinosaurus</h2>
+        <p>Spinosaurus was one of the largest dinosaurs, with a unique sail-like structure on its back.</p>
+    </div>
+    <div class="gallery-item">
+        <img src="images/parasaurolophus-gallery.jpg" alt="Parasaurolophus">
+        <h2>Parasaurolophus</h2>
+        <p>Parasaurolophus had a distinctive crest on its head used for communication.</p>
+    </div>
+    <div class="gallery-item">
+        <img src="images/allosaurus-gallery.jpg" alt="Allosaurus">
+        <h2>Allosaurus</h2>
+        <p>Allosaurus was a large predator with a powerful bite.</p>
+    </div>
+    <div class="gallery-item">
+        <img src="images/ankylosaurus-gallery.jpg" alt="Ankylosaurus">
+        <h2>Ankylosaurus</h2>
+        <p>Ankylosaurus was heavily armored and had a club-like tail for defense.</p>
+    </div>
+    <div class="gallery-item">
+        <img src="images/pteranodon-gallery.jpg" alt="Pteranodon">
+        <h2>Pteranodon</h2>
+        <p>Pteranodon was a flying reptile with an impressive wingspan.</p>
+    </div>
+</div>
+
+<footer>
+    <p>© 2024 DinoLearn</p>
+</footer>
+
+</body>
+</html>
 
