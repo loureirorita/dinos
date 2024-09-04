@@ -1,1 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinosaur Fun Facts</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+            background-color: #f9f7f7;
+            color: #333;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #377d71;
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            text-shadow: 2px 2px #264653;
+        }
+
+        .fun-facts {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .fact {
+            background-color: #e9c46a;
+            border-radius: 15px;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .fact img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .fact h2 {
+            font-size: 1.5rem;
+            margin: 15px 0;
+            color: #264653;
+        }
+
+        .fact p {
+            font-size: 1.1rem;
+            margin: 10px 0;
+        }
+
+        .home-button {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            background-color: #e76f51;
+            color: #fff;
+            border: none;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .home-button:hover {
+            background-color: #264653;
+        }
+
+        footer {
+            background-color: #264653;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Dinosaur Fun Facts</h1>
+</header>
+
+<!-- Home Button -->
+<button class="home-button" onclick="window.location.href='index.html'">Back to Home</button>
+
+<div class="fun-facts">
+    <div class="fact">
+        <img src="images/egg-fact.jpg" alt="Dinosaur Eggs">
+        <h2>Dinosaur Eggs</h2>
+        <p>Some dinosaurs laid eggs that were the size of a soccer ball, while others laid eggs as small as a marble!</p>
+    </div>
+    <div class="fact">
+        <img src="images/fossil-fact.jpg" alt="Fossils">
+        <h2>Fossilized Bones</h2>
+        <p>Most dinosaur fossils are found in sedimentary rocks, which form from layers of mud and sand.</p>
+    </div>
+    <div class="fact">
+        <img src="images/flight-fact.jpg" alt="Flying Dinosaurs">
+        <h2>Flying Dinosaurs</h2>
+        <p>Not all dinosaurs were ground-dwellers; some, like Pteranodon, were excellent fliers with wingspans up to 7 meters!</p>
+    </div>
+    <div class="fact">
+        <img src="images/size-fact.jpg" alt="Size Facts">
+        <h2>Giant Dinosaurs</h2>
+        <p>The largest dinosaurs, like Argentinosaurus, could weigh up to 100 tons and reach lengths of over 30 meters!</p>
+    </div>
+    <div class="fact">
+        <img src="images/speed-fact.jpg" alt="Speed Facts">
+        <h2>Speedy Dinosaurs</h2>
+        <p>Some dinosaurs, such as the Velociraptor, could run up to 64 km/h, making them incredibly fast hunters.</p>
+    </div>
+    <div class="fact">
+        <img src="images/smart-fact.jpg" alt="Intelligent Dinosaurs">
+        <h2>Smart Dinosaurs</h2>
+        <p>Some dinosaurs, like the Troodon, had larger brains relative to their body size, suggesting they were quite intelligent.</p>
+    </div>
+</div>
+
+<footer>
+    <p>© 2024 DinoLearn</p>
+</footer>
+
+</body>
+</html>
 
