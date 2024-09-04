@@ -96,6 +96,25 @@
             transform: scale(1.1);
         }
 
+        .home-button {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            background-color: #e76f51;
+            color: #fff;
+            border: none;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .home-button:hover {
+            background-color: #264653;
+        }
+
         footer {
             background-color: #264653;
             color: #fff;
@@ -116,9 +135,12 @@
     <h1>Learn More About Dinosaurs</h1>
 </header>
 
+<!-- Home Button -->
+<button class="home-button" onclick="window.location.href='index.html'">Back to Home</button>
+
 <div id="dino-page-1" class="dino-container active">
     <div class="dino">
-        <img src="#" alt="Dinosaur Image 1">
+        <img src="images/tyrannosaurus-rex.jpg" alt="Tyrannosaurus Rex">
         <div class="dino-details">
             <h2>Tyrannosaurus Rex</h2>
             <p><strong>Length:</strong> 12 meters</p>
@@ -129,7 +151,7 @@
         </div>
     </div>
     <div class="dino">
-        <img src="#" alt="Dinosaur Image 2">
+        <img src="images/triceratops.jpg" alt="Triceratops">
         <div class="dino-details">
             <h2>Triceratops</h2>
             <p><strong>Length:</strong> 9 meters</p>
@@ -140,7 +162,7 @@
         </div>
     </div>
     <div class="dino">
-        <img src="#" alt="Dinosaur Image 3">
+        <img src="images/velociraptor.jpg" alt="Velociraptor">
         <div class="dino-details">
             <h2>Velociraptor</h2>
             <p><strong>Length:</strong> 2 meters</p>
@@ -151,7 +173,7 @@
         </div>
     </div>
     <div class="dino">
-        <img src="#" alt="Dinosaur Image 4">
+        <img src="images/brachiosaurus.jpg" alt="Brachiosaurus">
         <div class="dino-details">
             <h2>Brachiosaurus</h2>
             <p><strong>Length:</strong> 26 meters</p>
@@ -162,7 +184,7 @@
         </div>
     </div>
     <div class="dino">
-        <img src="#" alt="Dinosaur Image 5">
+        <img src="images/stegosaurus.jpg" alt="Stegosaurus">
         <div class="dino-details">
             <h2>Stegosaurus</h2>
             <p><strong>Length:</strong> 9 meters</p>
@@ -176,7 +198,7 @@
 
 <div id="dino-page-2" class="dino-container">
     <div class="dino">
-        <img src="#" alt="Dinosaur Image 6">
+        <img src="images/spinosaurus.jpg" alt="Spinosaurus">
         <div class="dino-details">
             <h2>Spinosaurus</h2>
             <p><strong>Length:</strong> 18 meters</p>
@@ -187,7 +209,7 @@
         </div>
     </div>
     <div class="dino">
-        <img src="#" alt="Dinosaur Image 7">
+        <img src="images/parasaurolophus.jpg" alt="Parasaurolophus">
         <div class="dino-details">
             <h2>Parasaurolophus</h2>
             <p><strong>Length:</strong> 9.5 meters</p>
@@ -198,29 +220,29 @@
         </div>
     </div>
     <div class="dino">
-        <img src="#" alt="Dinosaur Image 8">
+        <img src="images/allosaurus.jpg" alt="Allosaurus">
         <div class="dino-details">
             <h2>Allosaurus</h2>
             <p><strong>Length:</strong> 12 meters</p>
             <p><strong>Height:</strong> 3.7 meters</p>
             <p><strong>Diet:</strong> Carnivore</p>
             <p><strong>Color:</strong> Light Brown</p>
-            <p><strong>Speed:</strong> 34 km/h</p>
+            <p><strong>Speed:</strong> 32 km/h</p>
         </div>
     </div>
     <div class="dino">
-        <img src="#" alt="Dinosaur Image 9">
+        <img src="images/ankylosaurus.jpg" alt="Ankylosaurus">
         <div class="dino-details">
             <h2>Ankylosaurus</h2>
-            <p><strong>Length:</strong> 7.6 meters</p>
-            <p><strong>Height:</strong> 1.7 meters</p>
+            <p><strong>Length:</strong> 6 meters</p>
+            <p><strong>Height:</strong> 1.8 meters</p>
             <p><strong>Diet:</strong> Herbivore</p>
-            <p><strong>Color:</strong> Dark Gray</p>
-            <p><strong>Speed:</strong> 10 km/h</p>
+            <p><strong>Color:</strong> Brown with Greenish Plates</p>
+            <p><strong>Speed:</strong> 8 km/h</p>
         </div>
     </div>
     <div class="dino">
-        <img src="#" alt="Dinosaur Image 10">
+        <img src="images/pteranodon.jpg" alt="Pteranodon">
         <div class="dino-details">
             <h2>Pteranodon</h2>
             <p><strong>Length:</strong> 6 meters (wingspan)</p>
@@ -263,3 +285,4 @@
 
 </body>
 </html>
+
