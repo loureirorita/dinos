@@ -1,1 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn More About Dinosaurs</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+            background-color: #f9f7f7;
+            color: #333;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #377d71;
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            text-shadow: 2px 2px #264653;
+        }
+
+        .dino-container {
+            display: none; /* Hide all containers by default */
+        }
+
+        .dino-container.active {
+            display: block; /* Show the active container */
+        }
+
+        .dino {
+            background-color: #e9c46a;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+        }
+
+        .dino img {
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+            margin-right: 20px;
+            background-color: #264653; /* Placeholder color for images */
+        }
+
+        .dino-details {
+            max-width: 500px;
+        }
+
+        .dino-details h2 {
+            font-size: 1.8rem;
+            margin: 0 0 10px;
+            color: #264653;
+        }
+
+        .dino-details p {
+            margin: 5px 0;
+            font-size: 1.1rem;
+        }
+
+        .pagination {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .pagination button {
+            background-color: #2a9d8f;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            margin: 0 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .pagination button:hover {
+            background-color: #264653;
+            transform: scale(1.1);
+        }
+
+        footer {
+            background-color: #264653;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Learn More About Dinosaurs</h1>
+</header>
+
+<div id="dino-page-1" class="dino-container active">
+    <div class="dino">
+        <img src="#" alt="Dinosaur Image 1">
+        <div class="dino-details">
+            <h2>Tyrannosaurus Rex</h2>
+            <p><strong>Length:</strong> 12 meters</p>
+            <p><strong>Height:</strong> 3.7 meters</p>
+            <p><strong>Diet:</strong> Carnivore</p>
+            <p><strong>Color:</strong> Dark Green</p>
+            <p><strong>Speed:</strong> 40 km/h</p>
+        </div>
+    </div>
+    <div class="dino">
+        <img src="#" alt="Dinosaur Image 2">
+        <div class="dino-details">
+            <h2>Triceratops</h2>
+            <p><strong>Length:</strong> 9 meters</p>
+            <p><strong>Height:</strong> 3 meters</p>
+            <p><strong>Diet:</strong> Herbivore</p>
+            <p><strong>Color:</strong> Brownish Gray</p>
+            <p><strong>Speed:</strong> 32 km/h</p>
+        </div>
+    </div>
+    <div class="dino">
+        <img src="#" alt="Dinosaur Image 3">
+        <div class="dino-details">
+            <h2>Velociraptor</h2>
+            <p><strong>Length:</strong> 2 meters</p>
+            <p><strong>Height:</strong> 50 cm</p>
+            <p><strong>Diet:</strong> Carnivore</p>
+            <p><strong>Color:</strong> Reddish Brown</p>
+            <p><strong>Speed:</strong> 64 km/h</p>
+        </div>
+    </div>
+    <div class="dino">
+        <img src="#" alt="Dinosaur Image 4">
+        <div class="dino-details">
+            <h2>Brachiosaurus</h2>
+            <p><strong>Length:</strong> 26 meters</p>
+            <p><strong>Height:</strong> 12 meters</p>
+            <p><strong>Diet:</strong> Herbivore</p>
+            <p><strong>Color:</strong> Greenish Brown</p>
+            <p><strong>Speed:</strong> 16 km/h</p>
+        </div>
+    </div>
+    <div class="dino">
+        <img src="#" alt="Dinosaur Image 5">
+        <div class="dino-details">
+            <h2>Stegosaurus</h2>
+            <p><strong>Length:</strong> 9 meters</p>
+            <p><strong>Height:</strong> 4.3 meters</p>
+            <p><strong>Diet:</strong> Herbivore</p>
+            <p><strong>Color:</strong> Grayish Green</p>
+            <p><strong>Speed:</strong> 7 km/h</p>
+        </div>
+    </div>
+</div>
+
+<div id="dino-page-2" class="dino-container">
+    <div class="dino">
+        <img src="#" alt="Dinosaur Image 6">
+        <div class="dino-details">
+            <h2>Spinosaurus</h2>
+            <p><strong>Length:</strong> 18 meters</p>
+            <p><strong>Height:</strong> 5.5 meters</p>
+            <p><strong>Diet:</strong> Carnivore</p>
+            <p><strong>Color:</strong> Dark Green</p>
+            <p><strong>Speed:</strong> 24 km/h</p>
+        </div>
+    </div>
+    <div class="dino">
+        <img src="#" alt="Dinosaur Image 7">
+        <div class="dino-details">
+            <h2>Parasaurolophus</h2>
+            <p><strong>Length:</strong> 9.5 meters</p>
+            <p><strong>Height:</strong> 5 meters</p>
+            <p><strong>Diet:</strong> Herbivore</p>
+            <p><strong>Color:</strong> Green with Yellow Stripes</p>
+            <p><strong>Speed:</strong> 40 km/h</p>
+        </div>
+    </div>
+    <div class="dino">
+        <img src="#" alt="Dinosaur Image 8">
+        <div class="dino-details">
+            <h2>Allosaurus</h2>
+            <p><strong>Length:</strong> 12 meters</p>
+            <p><strong>Height:</strong> 3.7 meters</p>
+            <p><strong>Diet:</strong> Carnivore</p>
+            <p><strong>Color:</strong> Light Brown</p>
+            <p><strong>Speed:</strong> 34 km/h</p>
+        </div>
+    </div>
+    <div class="dino">
+        <img src="#" alt="Dinosaur Image 9">
+        <div class="dino-details">
+            <h2>Ankylosaurus</h2>
+            <p><strong>Length:</strong> 7.6 meters</p>
+            <p><strong>Height:</strong> 1.7 meters</p>
+            <p><strong>Diet:</strong> Herbivore</p>
+            <p><strong>Color:</strong> Dark Gray</p>
+            <p><strong>Speed:</strong> 10 km/h</p>
+        </div>
+    </div>
+    <div class="dino">
+        <img src="#" alt="Dinosaur Image 10">
+        <div class="dino-details">
+            <h2>Pteranodon</h2>
+            <p><strong>Length:</strong> 6 meters (wingspan)</p>
+            <p><strong>Height:</strong> 1.8 meters</p>
+            <p><strong>Diet:</strong> Carnivore (fish)</p>
+            <p><strong>Color:</strong> Brown with Yellow Crest</p>
+            <p><strong>Speed:</strong> 30 km/h</p>
+        </div>
+    </div>
+</div>
+
+<div class="pagination">
+    <button onclick="showPage(1)">1</button>
+    <button onclick="showPage(2)">2</button>
+</div>
+
+<footer>
+    <p>© 2024 DinoLearn</p>
+</footer>
+
+<script>
+    function showPage(pageNumber) {
+        const containers = document.querySelectorAll('.dino-container');
+        containers.forEach((container, index) => {
+            container.classList.remove('active');
+            if (index === pageNumber - 1) {
+                container.classList.add('active');
+            }
+        });
+    }
+</script>
+
+</body>
+</html>
 
