@@ -1,2 +1,0 @@
-# dinos
-Dinossauros bué fixes
