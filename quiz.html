@@ -128,58 +128,15 @@
 <!-- Home Button -->
 <button class="home-button" onclick="window.location.href='index.html'">Back to Home</button>
 
-<div class="quiz-container">
-    <div class="question">
-        <h2>1. What was the primary diet of the Triceratops?</h2>
-        <ul class="options">
-            <li><input type="radio" name="q1" value="a"> Carnivore</li>
-            <li><input type="radio" name="q1" value="b"> Herbivore</li>
-            <li><input type="radio" name="q1" value="c"> Omnivore</li>
-        </ul>
-    </div>
+<div class="quiz-container" id="quiz-container">
+    <!-- Questions will be inserted here dynamically -->
+</div>
 
-    <div class="question">
-        <h2>2. What is the approximate length of the Brachiosaurus?</h2>
-        <ul class="options">
-            <li><input type="radio" name="q2" value="a"> 6 meters</li>
-            <li><input type="radio" name="q2" value="b"> 15 meters</li>
-            <li><input type="radio" name="q2" value="c"> 25 meters</li>
-        </ul>
-    </div>
+<button class="submit-button" onclick="checkAnswers()">Submit</button>
 
-    <div class="question">
-        <h2>3. How fast could a Velociraptor run?</h2>
-        <ul class="options">
-            <li><input type="radio" name="q3" value="a"> 30 km/h</li>
-            <li><input type="radio" name="q3" value="b"> 50 km/h</li>
-            <li><input type="radio" name="q3" value="c"> 64 km/h</li>
-        </ul>
-    </div>
-
-    <div class="question">
-        <h2>4. What was the primary diet of the Spinosaurus?</h2>
-        <ul class="options">
-            <li><input type="radio" name="q4" value="a"> Herbivore</li>
-            <li><input type="radio" name="q4" value="b"> Carnivore</li>
-            <li><input type="radio" name="q4" value="c"> Omnivore</li>
-        </ul>
-    </div>
-
-    <div class="question">
-        <h2>5. Which dinosaur had a sail-like structure on its back?</h2>
-        <ul class="options">
-            <li><input type="radio" name="q5" value="a"> Triceratops</li>
-            <li><input type="radio" name="q5" value="b"> Brachiosaurus</li>
-            <li><input type="radio" name="q5" value="c"> Spinosaurus</li>
-        </ul>
-    </div>
-
-    <button class="submit-button" onclick="checkAnswers()">Submit</button>
-
-    <div class="results">
-        <h2>Quiz Results</h2>
-        <p id="results-text"></p>
-    </div>
+<div class="results">
+    <h2>Quiz Results</h2>
+    <p id="results-text"></p>
 </div>
 
 <footer>
@@ -187,31 +144,335 @@
 </footer>
 
 <script>
-    function checkAnswers() {
-        const correctAnswers = {
-            q1: 'b',
-            q2: 'c',
-            q3: 'c',
-            q4: 'b',
-            q5: 'c'
-        };
+    const allQuestions = [
+        {
+            question: "What was the primary diet of the Triceratops?",
+            options: ["Carnivore", "Herbivore", "Omnivore"],
+            answer: "Herbivore"
+        },
+        {
+            question: "What is the approximate length of the Brachiosaurus?",
+            options: ["6 meters", "15 meters", "25 meters"],
+            answer: "25 meters"
+        },
+        {
+            question: "How fast could a Velociraptor run?",
+            options: ["30 km/h", "50 km/h", "64 km/h"],
+            answer: "64 km/h"
+        },
+        {
+            question: "What was the primary diet of the Spinosaurus?",
+            options: ["Herbivore", "Carnivore", "Omnivore"],
+            answer: "Carnivore"
+        },
+        {
+            question: "Which dinosaur had a sail-like structure on its back?",
+            options: ["Triceratops", "Brachiosaurus", "Spinosaurus"],
+            answer: "Spinosaurus"
+        },
+        {
+            question: "What was the primary diet of the Velociraptor?",
+            options: ["Carnivore", "Herbivore", "Omnivore"],
+            answer: "Carnivore"
+        },
+        {
+            question: "What feature is distinctive of the Stegosaurus?",
+            options: ["Sail-like crest", "Plates along the back", "Horns on the head"],
+            answer: "Plates along the back"
+        },
+        {
+            question: "How long was the average Parasaurolophus?",
+            options: ["5 meters", "10 meters", "12 meters"],
+            answer: "10 meters"
+        },
+        {
+            question: "What was the primary habitat of the Ankylosaurus?",
+            options: ["Desert", "Forest", "Swamp"],
+            answer: "Forest"
+        },
+        {
+            question: "Which dinosaur was known for its large frill and three horns?",
+            options: ["Triceratops", "Stegosaurus", "Ankylosaurus"],
+            answer: "Triceratops"
+        },
+        {
+            question: "What was the primary diet of the Brachiosaurus?",
+            options: ["Carnivore", "Herbivore", "Omnivore"],
+            answer: "Herbivore"
+        },
+        {
+            question: "Which dinosaur was a flying reptile?",
+            options: ["Pteranodon", "Tyrannosaurus Rex", "Triceratops"],
+            answer: "Pteranodon"
+        },
+        {
+            question: "What is the approximate width of the Spinosaurus?",
+            options: ["2 meters", "5 meters", "7 meters"],
+            answer: "7 meters"
+        },
+        {
+            question: "Which dinosaur is famous for having a large, curved crest on its head?",
+            options: ["Parasaurolophus", "Stegosaurus", "Triceratops"],
+            answer: "Parasaurolophus"
+        },
+        {
+            question: "Which dinosaur had a tail club used for defense?",
+            options: ["Ankylosaurus", "Triceratops", "Velociraptor"],
+            answer: "Ankylosaurus"
+        },
+        {
+            question: "Which dinosaur was one of the largest land predators?",
+            options: ["Tyrannosaurus Rex", "Spinosaurus", "Allosaurus"],
+            answer: "Spinosaurus"
+        },
+        {
+            question: "What feature is characteristic of the Diplodocus?",
+            options: ["Long neck", "Short arms", "Large horns"],
+            answer: "Long neck"
+        },
+        {
+            question: "What was the average length of the Allosaurus?",
+            options: ["6 meters", "12 meters", "15 meters"],
+            answer: "12 meters"
+        },
+        {
+            question: "What was the primary diet of the Iguanodon?",
+            options: ["Carnivore", "Herbivore", "Omnivore"],
+            answer: "Herbivore"
+        },
+        {
+            question: "Which dinosaur had a large sail on its back?",
+            options: ["Spinosaurus", "Velociraptor", "Stegosaurus"],
+            answer: "Spinosaurus"
+        },
+        {
+            question: "How fast could the Brachiosaurus run?",
+            options: ["10 km/h", "20 km/h", "30 km/h"],
+            answer: "10 km/h"
+        },
+        {
+            question: "Which dinosaur had a large, curved bill similar to a duck?",
+            options: ["Parasaurolophus", "Triceratops", "Iguanodon"],
+            answer: "Parasaurolophus"
+        },
+        {
+            question: "What was the primary diet of the Stegosaurus?",
+            options: ["Carnivore", "Herbivore", "Omnivore"],
+            answer: "Herbivore"
+        },
+        {
+            question: "Which dinosaur had a large bony plate along its back?",
+            options: ["Ankylosaurus", "Stegosaurus", "Pteranodon"],
+            answer: "Stegosaurus"
+        },
+        {
+            question: "Which dinosaur had a horn-like crest on its head used for display and defense?",
+            options: ["Triceratops", "Ankylosaurus", "Diplodocus"],
+            answer: "Triceratops"
+        },
+        {
+            question: "Which dinosaur was known for its large, bony plates and spiked tail?",
+            options: ["Ankylosaurus", "Stegosaurus", "Brachiosaurus"],
+            answer: "Stegosaurus"
+        },
+        {
+            question: "How fast could a Tyrannosaurus Rex run?",
+            options: ["20 km/h", "40 km/h", "60 km/h"],
+            answer: "40 km/h"
+        },
+        {
+            question: "Which dinosaur was known for its long neck and tail?",
+            options: ["Diplodocus", "Triceratops", "Stegosaurus"],
+            answer: "Diplodocus"
+        },
+        {
+            question: "What was the primary diet of the Diplodocus?",
+            options: ["Carnivore", "Herbivore", "Omnivore"],
+            answer: "Herbivore"
+        },
+        {
+            question: "Which dinosaur had a beak-like mouth and was known for its herbivorous diet?",
+            options: ["Iguanodon", "Velociraptor", "Tyrannosaurus Rex"],
+            answer: "Iguanodon"
+        },
+        {
+            question: "Which dinosaur was known for its large, sharp teeth and claws?",
+            options: ["Tyrannosaurus Rex", "Ankylosaurus", "Diplodocus"],
+            answer: "Tyrannosaurus Rex"
+        },
+        {
+            question: "What was the average length of the Velociraptor?",
+            options: ["1.8 meters", "3 meters", "5 meters"],
+            answer: "1.8 meters"
+        },
+        {
+            question: "Which dinosaur had a long, whip-like tail used for defense?",
+            options: ["Triceratops", "Stegosaurus", "Diplodocus"],
+            answer: "Stegosaurus"
+        },
+        {
+            question: "What was the primary diet of the Brachiosaurus?",
+            options: ["Carnivore", "Herbivore", "Omnivore"],
+            answer: "Herbivore"
+        },
+        {
+            question: "Which dinosaur had a bony plate along its back and a tail club?",
+            options: ["Ankylosaurus", "Spinosaurus", "Triceratops"],
+            answer: "Ankylosaurus"
+        },
+        {
+            question: "What was the primary diet of the Pteranodon?",
+            options: ["Carnivore", "Herbivore", "Piscivore"],
+            answer: "Piscivore"
+        },
+        {
+            question: "Which dinosaur had a long, slender body and long legs for running?",
+            options: ["Velociraptor", "Brachiosaurus", "Stegosaurus"],
+            answer: "Velociraptor"
+        },
+        {
+            question: "What was the primary diet of the Spinosaurus?",
+            options: ["Carnivore", "Herbivore", "Omnivore"],
+            answer: "Carnivore"
+        },
+        {
+            question: "Which dinosaur was known for its distinctive frill and three horns?",
+            options: ["Triceratops", "Ankylosaurus", "Velociraptor"],
+            answer: "Triceratops"
+        },
+        {
+            question: "How long was the average Brachiosaurus?",
+            options: ["15 meters", "25 meters", "30 meters"],
+            answer: "25 meters"
+        },
+        {
+            question: "Which dinosaur had a long, whip-like tail for defense?",
+            options: ["Stegosaurus", "Ankylosaurus", "Diplodocus"],
+            answer: "Stegosaurus"
+        },
+        {
+            question: "What was the primary diet of the Iguanodon?",
+            options: ["Carnivore", "Herbivore", "Omnivore"],
+            answer: "Herbivore"
+        },
+        {
+            question: "Which dinosaur had a long neck and was one of the tallest dinosaurs?",
+            options: ["Brachiosaurus", "Triceratops", "Stegosaurus"],
+            answer: "Brachiosaurus"
+        },
+        {
+            question: "What was the primary diet of the Velociraptor?",
+            options: ["Carnivore", "Herbivore", "Omnivore"],
+            answer: "Carnivore"
+        },
+        {
+            question: "Which dinosaur was known for its large claws and teeth?",
+            options: ["Tyrannosaurus Rex", "Spinosaurus", "Velociraptor"],
+            answer: "Tyrannosaurus Rex"
+        },
+        {
+            question: "What was the primary diet of the Stegosaurus?",
+            options: ["Carnivore", "Herbivore", "Omnivore"],
+            answer: "Herbivore"
+        },
+        {
+            question: "Which dinosaur had a large, bony plate along its back?",
+            options: ["Stegosaurus", "Ankylosaurus", "Triceratops"],
+            answer: "Stegosaurus"
+        },
+        {
+            question: "How fast could the Spinosaurus run?",
+            options: ["20 km/h", "30 km/h", "40 km/h"],
+            answer: "30 km/h"
+        },
+        {
+            question: "Which dinosaur had a large, sail-like crest on its back?",
+            options: ["Spinosaurus", "Triceratops", "Velociraptor"],
+            answer: "Spinosaurus"
+        },
+        {
+            question: "What was the primary diet of the Parasaurolophus?",
+            options: ["Carnivore", "Herbivore", "Omnivore"],
+            answer: "Herbivore"
+        },
+        {
+            question: "Which dinosaur was known for its long, slender legs and quick movements?",
+            options: ["Velociraptor", "Brachiosaurus", "Ankylosaurus"],
+            answer: "Velociraptor"
+        },
+        {
+            question: "What was the approximate length of the Diplodocus?",
+            options: ["15 meters", "25 meters", "30 meters"],
+            answer: "30 meters"
+        },
+        {
+            question: "Which dinosaur had a large, bony frill and three horns on its head?",
+            options: ["Triceratops", "Ankylosaurus", "Stegosaurus"],
+            answer: "Triceratops"
+        },
+        {
+            question: "How fast could a Diplodocus run?",
+            options: ["20 km/h", "30 km/h", "40 km/h"],
+            answer: "20 km/h"
+        },
+        {
+            question: "Which dinosaur was known for its large claws and predatory nature?",
+            options: ["Velociraptor", "Tyrannosaurus Rex", "Spinosaurus"],
+            answer: "Tyrannosaurus Rex"
+        },
+        {
+            question: "What was the primary diet of the Brachiosaurus?",
+            options: ["Carnivore", "Herbivore", "Omnivore"],
+            answer: "Herbivore"
+        },
+        {
+            question: "Which dinosaur had a large sail-like structure on its back?",
+            options: ["Spinosaurus", "Triceratops", "Ankylosaurus"],
+            answer: "Spinosaurus"
+        }
+    ];
 
+    function getRandomQuestions(num) {
+        const shuffled = allQuestions.sort(() => 0.5 - Math.random());
+        return shuffled.slice(0, num);
+    }
+
+    function renderQuestions() {
+        const quizContainer = document.getElementById('quiz-container');
+        const questions = getRandomQuestions(5);
+
+        quizContainer.innerHTML = questions.map((q, index) => `
+            <div class="question">
+                <h2>${index + 1}. ${q.question}</h2>
+                <ul class="options">
+                    ${q.options.map((option, i) => `
+                        <li><input type="radio" name="q${index}" value="${option}"> ${option}</li>
+                    `).join('')}
+                </ul>
+            </div>
+        `).join('');
+    }
+
+    function checkAnswers() {
+        const correctAnswers = allQuestions.slice(0, 5).map((q, index) => q.answer);
         let score = 0;
 
-        Object.keys(correctAnswers).forEach(question => {
-            const selectedOption = document.querySelector(`input[name="${question}"]:checked`);
-            if (selectedOption && selectedOption.value === correctAnswers[question]) {
+        correctAnswers.forEach((correctAnswer, index) => {
+            const selectedOption = document.querySelector(`input[name="q${index}"]:checked`);
+            if (selectedOption && selectedOption.value === correctAnswer) {
                 score++;
             }
         });
 
         const resultsText = document.getElementById('results-text');
         resultsText.textContent = `You got ${score} out of 5 correct!`;
-        
+
         document.querySelector('.results').style.display = 'block';
     }
+
+    // Initialize quiz on page load
+    renderQuestions();
 </script>
 
 </body>
 </html>
-
