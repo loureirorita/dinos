@@ -28,10 +28,13 @@
 
         .dino-container {
             display: none; /* Hide all containers by default */
+            opacity: 0; /* Start invisible for animation */
+            transition: opacity 0.5s ease-in-out; /* Animation for fading */
         }
 
         .dino-container.active {
             display: block; /* Show the active container */
+            opacity: 1; /* Fade in */
         }
 
         .dino {
@@ -81,6 +84,11 @@
             cursor: pointer;
             margin: 0 5px;
             transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .pagination button.active {
+            background-color: #e76f51; /* Active page indicator color */
+            transform: scale(1.1); /* Slightly larger to indicate selection */
         }
 
         .pagination button:hover {
@@ -225,8 +233,8 @@
 </div>
 
 <div class="pagination">
-    <button onclick="showPage(1)">1</button>
-    <button onclick="showPage(2)">2</button>
+    <button onclick="showPage(1)" id="page-1-button" class="active">1</button>
+    <button onclick="showPage(2)" id="page-2-button">2</button>
 </div>
 
 <footer>
@@ -236,15 +244,22 @@
 <script>
     function showPage(pageNumber) {
         const containers = document.querySelectorAll('.dino-container');
+        const buttons = document.querySelectorAll('.pagination button');
+        
         containers.forEach((container, index) => {
             container.classList.remove('active');
             if (index === pageNumber - 1) {
                 container.classList.add('active');
             }
         });
+
+        buttons.forEach(button => {
+            button.classList.remove('active');
+        });
+
+        document.getElementById(`page-${pageNumber}-button`).classList.add('active');
     }
 </script>
 
 </body>
 </html>
-
